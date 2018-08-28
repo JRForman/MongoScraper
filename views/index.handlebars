@@ -1,0 +1,79 @@
+<nav class="navbar navbar-dark bg-dark navbar-expand-lg">
+    <a class="navbar-brand" href="/">
+        <img src="./images/y18.gif" width="30" height="30" class="d-inline-block align-top" alt="HN Logo"> Hacker News Scapper
+    </a>
+    <div class="btn-toolbar">
+        <button class="btn btn-outline-success mr-3" id="saved" type="button">Saved Ariticles</button>
+        <button class="btn btn-outline-danger " id="scraped" type="button">Scrape Articles</button>
+    </div>
+</nav>
+<br>
+<h3 id="message">Press Scrape Articles to begin!!!</h3>
+
+{{!--
+<div id="articles"></div> --}}
+<div id="notes"></div>
+
+<div class="container" id="savedContainer">
+    <div class="row">
+        <div class="col-12" id="savedArticles"></div>
+    </div>
+</div>
+
+<div class="container" id="articlesContainer">
+    <div class="row">
+        <div class="col-12" id="articles"></div>
+    </div>
+</div>
+
+
+
+
+<div class="modal" id="scraperModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Scrape Successful</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p id="scrapeMessage">Articles scraped</p>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal" id="notesModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Notes</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="message-text" class="col-form-label">Note:</label>
+                    <textarea class="form-control" id="note-text"></textarea>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save Note</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<script src="app.js"></script>
