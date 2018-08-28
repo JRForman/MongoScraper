@@ -6,7 +6,7 @@ var app = express();
 
 var routes = require("./controllers/controller.js");
 
-var PORT = 3000;
+var PORT = process.env.PORT || 3000;
 var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/ArticleScraper";
 
 app.use(bodyParser.urlencoded({ extended: true }));
